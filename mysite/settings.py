@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taggit',
+    'accounts.apps.AccountsConfig',
     'blog.apps.BlogConfig',
 ]
 
@@ -121,4 +122,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# taggit을 쓰기 위한 코드
 TAGGIT_CASE_INSENSITIVE = True
+
+# 장고에서 만들어진 User를 쓰는것이 아닌 내가 커스텀한 유저를 사용하겠다는 코드
+AUTH_USER_MODEL = 'accounts.User'

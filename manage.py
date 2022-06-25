@@ -3,10 +3,10 @@
 import os
 import sys
 
-
+# 개발모드에서는 manage.py
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.develop')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
